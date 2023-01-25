@@ -1,10 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { ReactComponent as Carrots } from './carrots.svg';
-import { ReactComponent as Lettuce } from './lettuce.svg';
-import { ReactComponent as Logo } from './logo.svg';
-import { ReactComponent as Pineapple } from './pineapple.svg';
-import { ReactComponent as Tomatoes } from './tomatoes.svg';
+import { ReactComponent as Avocado } from './svg/avocado.svg';
+import { ReactComponent as Carrots } from './svg/carrots.svg';
+import { ReactComponent as Expires } from './svg/expires.svg';
+import { ReactComponent as Expires2 } from './svg/expires2.svg';
+import { ReactComponent as Fresh } from './svg/fresh.svg';
+import { ReactComponent as Lettuce } from './svg/lettuce.svg';
+import { ReactComponent as Logo } from './svg/logo.svg';
+import { ReactComponent as Milk } from './svg/milk.svg';
+import { ReactComponent as Milk2 } from './svg/milk2.svg';
+import { ReactComponent as Pineapple } from './svg/pineapple.svg';
+import { ReactComponent as Tomatoes } from './svg/tomatoes.svg';
 
 const headerStyles = css`
   position: relative;
@@ -37,22 +43,19 @@ const navStyles = css`
     text-decoration: none;
     color: currentColor;
     font-weight: medium;
-  }
-`;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
 
-const linkStyles = css`
-  padding: 20px;
-  border-radius: 8px;
-  background-color: transparent;
-  position: relative;
-  z-index: 1;
-
-  @media screen and (max-width: 824px) {
-    display: none;
-  }
-  :hover {
-    background-color: #d3d3d3;
-    transition: background-color 0.2s ease 0s;
+    @media screen and (max-width: 824px) {
+      display: none;
+    }
+    :hover {
+      background-color: #d3d3d3;
+      transition: background-color 0.2s ease 0s;
+    }
   }
 `;
 
@@ -193,6 +196,7 @@ const sectionStyle = css`
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  max-height: 500px;
 
   h1 {
     margin: 7rem 9rem 10px 9rem;
@@ -223,13 +227,147 @@ const expirationDatesTextDiv = css`
   h2 {
     font-size: 60px;
     font-weight: 700;
+    position: relative;
+    top: -250px;
   }
   p {
     font-size: 1.25rem;
     line-height: 2rem;
     font-weight: 600;
     color: rgb(54, 181, 53);
+    position: relative;
+    top: -250px;
   }
+`;
+const secondBoxSectionStyle = css`
+  padding: 0px 0px 410px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+const milkSvg = css`
+  border-radius: 20px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  background: linear-gradient(
+    135deg,
+    rgb(218, 227, 244) 0%,
+    rgb(146, 163, 195) 100%
+  );
+  color: rgb(0, 0, 0);
+  position: relative;
+  top: 120px;
+  left: 150px;
+`;
+const expireSvg = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+
+  color: rgb(29, 29, 29);
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  position: relative;
+  top: 20px;
+  left: 300px;
+`;
+const expire2Svg = css`
+  color: rgb(29, 29, 29);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  border-radius: 20px;
+  position: relative;
+  top: -60px;
+  left: 440px;
+`;
+const alertsSection = css`
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 260px;
+`;
+
+const alertsTextStyle = css`
+  flex-wrap: wrap;
+  margin-left: 400px;
+  padding: 30px;
+
+  h2 {
+    font-size: 60px;
+    font-weight: 800;
+    position: relative;
+    top: -250px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: rgb(54, 181, 53);
+    position: relative;
+    top: -250px;
+    text-align: center;
+  }
+`;
+const alertSvgStyle = css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-top: -60px;
+`;
+const avocadoSvgStyle = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  background: linear-gradient(
+    135deg,
+    rgb(220, 241, 176) 0%,
+    rgb(131, 208, 139) 100%
+  );
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  position: relative;
+  top: 0px;
+  left: 100px;
+`;
+
+const milk2Style = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  background: linear-gradient(
+    135deg,
+    rgb(246, 245, 242) 0%,
+    rgb(211, 219, 235) 100%
+  );
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  position: relative;
+  top: -160px;
+  left: 230px;
+`;
+
+const freshSvgStyle = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  background: linear-gradient(
+    135deg,
+    rgb(255, 232, 188) 0%,
+    rgb(255, 156, 84) 100%
+  );
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  position: relative;
+  top: -280px;
+  left: 370px;
+`;
+const darkModeStyle = css`
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  padding: 120px 0px;
+  margin: 240px 0px;
+  background: rgb(20, 20, 20);
+
+  color: rgb(255, 255, 255);
 `;
 
 export default function App() {
@@ -241,13 +379,13 @@ export default function App() {
             <Logo />
           </a>
           <nav css={navStyles}>
-            <span css={linkStyles}>
+            <span>
               <a href="/#">About</a>
             </span>
-            <span css={linkStyles}>
+            <span>
               <a href="/#"> Awareness</a>
             </span>
-            <span css={linkStyles}>
+            <span>
               <a href="/#"> Support</a>
             </span>
             <span css={buttonStyle}>
@@ -303,7 +441,35 @@ export default function App() {
               control so you can eat it before it's too late.
             </p>
           </div>
-          <div></div>
+          <div css={secondBoxSectionStyle}>
+            <Milk css={milkSvg} />
+            <Expires css={expireSvg} />
+            <Expires2 css={expire2Svg} />
+          </div>
+        </section>
+        <section css={alertsSection}>
+          <div css={alertSvgStyle}>
+            <Avocado css={avocadoSvgStyle} />
+            <Milk2 css={milk2Style} />
+            <Fresh css={freshSvgStyle} />
+          </div>
+          <div css={alertsTextStyle}>
+            <h2>Alerts, always in time.</h2>
+            <p>
+              Enable notifications and Kiff will alert you when your food stops
+              being fresh or is about to expire.
+            </p>
+          </div>
+          <div css={darkModeStyle}>
+            <div>
+              <h2>And of course, dark mode. </h2>
+              <p>
+                Perfect for those midnight trips to the fridge for a healthy
+                snack.
+              </p>
+            </div>
+            <div></div>
+          </div>
         </section>
       </main>
     </>
