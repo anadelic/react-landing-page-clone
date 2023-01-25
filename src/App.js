@@ -11,6 +11,7 @@ import { ReactComponent as Milk } from './svg/milk.svg';
 import { ReactComponent as Milk2 } from './svg/milk2.svg';
 import { ReactComponent as Pineapple } from './svg/pineapple.svg';
 import { ReactComponent as Tomatoes } from './svg/tomatoes.svg';
+import { ReactComponent as Topxel } from './svg/topxel.svg';
 
 const headerStyles = css`
   position: relative;
@@ -284,12 +285,14 @@ const alertsSection = css`
   align-items: center;
   position: relative;
   bottom: 260px;
+  max-height: 500px;
 `;
 
 const alertsTextStyle = css`
   flex-wrap: wrap;
   margin-left: 400px;
   padding: 30px;
+  width: 500px;
 
   h2 {
     font-size: 60px;
@@ -359,15 +362,90 @@ const freshSvgStyle = css`
   left: 370px;
 `;
 const darkModeStyle = css`
-  display: flex;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  bottom: 400px;
   width: 100%;
-
+  max-height: 500px;
   padding: 120px 0px;
   margin: 240px 0px;
   background: rgb(20, 20, 20);
-
   color: rgb(255, 255, 255);
+  gap: 70px;
+
+  h2 {
+    margin-bottom: 24px;
+    font-weight: 800;
+    font-size: 60px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    text-align: center;
+  }
+`;
+const endTextStyle = css`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+  bottom: 400px;
+  h2 {
+    font-size: 60px;
+    font-weight: 800;
+    color: #1d1d1d;
+  }
+  p {
+    color: #36b535;
+    font-size: 20px;
+    font-weight: 600;
+  }
+`;
+const footerStyle = css`
+  width: 100%;
+  background-color: rgb(20, 20, 20);
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 350px;
+
+  p {
+    color: lightgray;
+  }
+`;
+const footerNavStyle = css`
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  list-style-type: none;
+  a {
+    text-decoration: none;
+    color: currentColor;
+    font-weight: medium;
+    padding: 20px;
+    font-size: 26px;
+    :hover {
+      background-color: rgb(214, 230, 252);
+      transition: background-color 0.2s ease 0s;
+      border-radius: 20px;
+    }
+  }
+`;
+const logoTopxelStyle = css`
+  display: block;
+  position: relative;
+  top: 4px;
+  width: 160px;
+  height: auto;
 `;
 
 export default function App() {
@@ -460,17 +538,64 @@ export default function App() {
               being fresh or is about to expire.
             </p>
           </div>
-          <div css={darkModeStyle}>
-            <div>
-              <h2>And of course, dark mode. </h2>
-              <p>
-                Perfect for those midnight trips to the fridge for a healthy
-                snack.
-              </p>
-            </div>
-            <div></div>
+        </section>
+        <section css={darkModeStyle}>
+          <div>
+            <h2>
+              And of course,
+              <br /> dark mode.{' '}
+            </h2>
+            <p>
+              Perfect for those midnight trips to the fridge for a healthy
+              snack.
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://kiff.app/static/en-dark-ns-cut.webp"
+              alt="Kiff app dark mode screenshot"
+            />
           </div>
         </section>
+        <section css={endTextStyle}>
+          <div>
+            <h2>
+              Stop wasting food and start
+              <br /> saving money.
+            </h2>
+          </div>
+          <div>
+            <p>Pay once, yours forever.</p>{' '}
+          </div>
+        </section>
+        <footer css={footerStyle}>
+          <div>
+            <Topxel css={logoTopxelStyle} />
+            <p>
+              Kiff, an app from Topxel.
+              <br />© Copyright 2020 2023 All Rights Reserved.
+            </p>
+          </div>
+          <nav>
+            <ul css={footerNavStyle}>
+              <li>
+                <a href="/#">Home</a>
+              </li>
+              <li>
+                <a href="/#">Press Kit</a>
+              </li>
+              <li>
+                <a href="/#">About</a>
+              </li>
+              <li>
+                <a href="/#">Support</a>
+              </li>
+              <li>
+                <a href="/#">Download</a>
+              </li>
+            </ul>
+          </nav>
+        </footer>
       </main>
     </>
   );
