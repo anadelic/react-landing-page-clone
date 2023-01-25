@@ -11,7 +11,6 @@ root.render(
     <Global
       styles={css`
         body {
-          -webkit-font-smoothing: antialiased;
           overscroll-behavior: none;
           font-family: Inter, -apple-system, BlinkMacSystemFont, 'San Francisco',
             Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
@@ -19,9 +18,9 @@ root.render(
           color: rgb(29, 29, 29);
           display: flex;
           flex-flow: column nowrap;
-          -webkit-box-pack: justify;
           justify-content: space-between;
           min-height: 100vh;
+          margin: 0px auto;
         }
         *,
         ::after,
